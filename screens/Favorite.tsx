@@ -22,17 +22,11 @@ function FavoriteScreen() {
     return (
         <SafeAreaView>
         <View>
-            {fetchedFavoriteUsers.length ? (
-                <FlatList
-                    data={fetchedFavoriteUsers}
-                    renderItem={renderUserItem}
-                    keyExtractor={(user) => user?.login?.uuid}
-                />
-            ) : (
-                <View style={styles.emptyContainer}>
-                    <Text style={styles.emptyText}>Adding your favorite person from Home page</Text>
-                </View>
-            )}
+            <FlatList
+                data={fetchedFavoriteUsers}
+                renderItem={renderUserItem}
+                keyExtractor={(user) => user?.login?.uuid}
+            />
         </View>
         </SafeAreaView>
     )
