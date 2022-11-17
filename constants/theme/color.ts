@@ -1,0 +1,1 @@
+export const THEME_COLOR = '#E12C6D'
